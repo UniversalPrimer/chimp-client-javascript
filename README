@@ -1,0 +1,13 @@
+
+
+This is a javascript client for the Chimp protocol which is built on top of APE
+
+You can try it out at http://gui.grafiki.org/
+
+It's built on top of the official APE client.
+
+It adds the following:
+
+   APE error reporting
+   Simpler API
+

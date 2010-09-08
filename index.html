@@ -1,0 +1,51 @@
+<html>
+  <head>  
+
+    <script type='text/javascript' src='js/prototype.js'></script>
+    <script type='text/javascript' src='js/ape-jsf/Build/uncompressed/apeClientJS.js'></script>
+    <script type='text/javascript' src='js/ape_config.js'></script>
+    <script type='text/javascript' src='js/ape.js'></script>
+    <script type='text/javascript'>
+
+      var chan = null;
+
+      function doSend() {
+        chan.send($('msg').value);
+      }
+
+
+      function onChanReady() {
+        $('sendButton').disabled = false;
+      }
+
+      function onReceive(msg) {
+        $('received').innerHTML += '<p>' + msg + '</p>';
+      }
+
+      function onApeReady() {
+        chan = ape.joinChannel('foo', onReceive, onChanReady);
+      }
+
+
+      function pageInit() {
+        ape.init(onApeReady);
+      }
+
+    </script>
+  </head>
+
+  <body onload='pageInit()'>
+
+    <p>APE test</p>
+
+    <p><input id='msg' type='text' /><input id='sendButton' type='button' disabled='disabled' onclick='doSend()' value='send' /></p>
+
+    <p>Received:</p>
+
+    <div id='received'> </div>
+
+
+
+
+  </body>
+</html>
