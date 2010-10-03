@@ -6,9 +6,9 @@ function ape_config() {
    * APE JSF Setup
    */
 
-  APE.Config.baseUrl = 'http://gui.grafiki.org/js/ape-jsf/'; //APE JSF 
+  APE.Config.baseUrl = 'http://apel.grafiki.org/js/ape-jsf/'; //APE JSF 
   APE.Config.domain = 'auto'; 
-  APE.Config.server = 'ape.gui.grafiki.org:6969'; //APE server URL
+  APE.Config.server = 'apel.grafiki.org:6969'; //APE server URL
   APE.Config.transport = 6;
 
   (function(){

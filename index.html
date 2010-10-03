@@ -13,7 +13,6 @@
         chan.send($('msg').value);
       }
 
-
       function onChanReady() {
         $('sendButton').disabled = false;
       }
@@ -25,7 +24,6 @@
       function onApeReady() {
         chan = ape.joinChannel('foo', onReceive, onChanReady);
       }
-
 
       function pageInit() {
         ape.init(onApeReady);

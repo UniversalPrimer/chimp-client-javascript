@@ -11,3 +11,28 @@ It adds the following:
    APE error reporting
    Simpler API
 
+= Configuration =
+
+You need to create an ape_config.js file in js/ in order for the app to work
+
+If you're running everything as localhost, you can simply copy the file js/ape_config_example.js to js/ape_config.js
+
+Now set up a webserver that has the files from this project in its root dir and listens on 127.0.0.1 port 80.
+
+Using this setup, you will need an internet connection. Yes even for local development. If you want to understand why, or get around that, read on. Otherwise go to http://apel.grafiki.org/ and you're ready to go.
+
+APE needs a very high number (how many?) of
+subdomains like:
+ 
+  1.mydomain
+  2.mydomain
+  3.mydomain
+  etc.
+
+The example conf uses *.apel.grafiki.org, which resolves to 127.0.0.1
+
+If you don't feel like needing an internet connection for local development
+you have to add these many entries to your /etc/hosts 
+(remembering to edit the ape_config.js file)
+or run a local DNS server.
+
